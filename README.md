@@ -5,7 +5,13 @@
 This code provides a modifier for OVITO to calculate the number of hydrogen bonds and the average number of hydrogen bonds in a system. It is specifically designed for systems like water where hydrogen bonding plays a significant role.
 
 ---
+## Installation
 
+To install the package, ensure you are in the directory containing the `pyproject.toml` file and run the following command:
+
+```bash
+pip install .
+```
 ## Usage
 <div align="center">
 	<img src="Examples/H_bonds.png" alt="Hydrogen Bond model" witdth="100">
