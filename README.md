@@ -7,6 +7,7 @@ This code provides a modifier for OVITO to calculate the number of hydrogen bond
 ---
 
 ## Usage
+![Hydrogen Bond model](Examples/H_bonds.png "Hydrogen Bond model")
 
 The modifier can be seamlessly integrated into OVITO's pipeline, similar to other built-in modifiers.
 
