@@ -8,8 +8,8 @@ This code provides a modifier for OVITO to calculate the number of hydrogen bond
 
 ## Usage
 <div align="center">
-	<img src="Examples/H_bonds.png" alt="Hydrogen Bond model" witdth="300">
-	<p><em>Figure 1: Hydrogen bond model</em></p>
+	<img src="Examples/H_bonds.png" alt="Hydrogen Bond model" witdth="200">
+	<p><strong>Figure 1: Hydrogen bond model</strong></p>
 </div>
 
 The modifier can be seamlessly integrated into OVITO's pipeline, similar to other built-in modifiers.
