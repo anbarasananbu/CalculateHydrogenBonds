@@ -54,10 +54,10 @@ donor_count: The number of donor atoms.
 	print("Donor Atom Count:", data.attributes["donor_count"])
 	```
 	
-### Limitations
-## Particle Types:
+## Limitations
+### Particle Types:
 The calculation depends on correctly assigned particle types for donors, acceptors, and hydrogen atoms (H_atom). Ensure your simulation data has these particle types accurately specified.
 
-## Default Parameters:
+### Default Parameters:
 The bond length between the donor and hydrogen atom is set to a default value of 1.0 Å. This value is suitable for water systems but can be changed in the source code if needed.
 Water-Specific: The modifier is tailored for hydrogen bond calculations in water systems. Its applicability to other systems might require adjustments in the code.
