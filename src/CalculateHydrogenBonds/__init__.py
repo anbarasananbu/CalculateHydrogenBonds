@@ -47,7 +47,8 @@ class CalculateHydrogenBonds(ModifierInterface):
         
         oh_rcut = 1.05  # Cutoff for donor-hydrogen bonds in H2O
         nhbond = 0  # Initialize hydrogen bond count
-    
+        h_donor_array = np.zeros(data.particles.count, dtype=int)
+        
         for donor_index in donor_indices:
             donor_O = particle_positions[donor_index]  # Get donor oxygen position
     
@@ -67,7 +68,10 @@ class CalculateHydrogenBonds(ModifierInterface):
                        for acceptor in acceptor_positions
                        if (angle := self.calculate_angle(donor_O, donor_hyd, acceptor, box_lengths)) >= self.dha_rangle])
             nhbond += angles  
+            h_donor_array[donor_index] = 1 if angles > 0 else 0
         
         # Store the hydrogen bond count as an attribute of the current frame
         data.attributes["Hbond_count"] = nhbond
         data.attributes["donor_count"] = len(donor_indices)
+         # Assign the `HDonor` property to all particles
+        data.particles_.create_property("HDonor", data=h_donor_array)
